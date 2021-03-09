@@ -2,8 +2,8 @@
     require_once('database.php');
 
     // Get all categories
-    $query = 'SELECT * FROM categories
-              ORDER BY categoryID';
+    $query = 'SELECT * FROM leagues
+              ORDER BY leagueID';
     $statement = $db->prepare($query);
     $statement->execute();
     $categories = $statement->fetchAll();
@@ -14,7 +14,7 @@
 <?php
 include('includes/header.php');
 ?>
-    <h1>Category List</h1>
+    <h1>League List</h1>
     <table>
         <tr>
             <th>Name</th>

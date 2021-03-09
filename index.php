@@ -46,7 +46,7 @@ include('includes/header.php');
 
 <aside>
 <!-- display a list of categories -->
-<h2>Categories</h2>
+<h2>Leagues</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -77,10 +77,8 @@ include('includes/header.php');
 <td class="right"><?php echo $record['price']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
-<input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+<input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
+<input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
 <td><form action="edit_record_form.php" method="post"
