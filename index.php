@@ -65,7 +65,7 @@ include('includes/header.php');
 <table>
 <tr>
 <th>Image</th>
-<th>Name</th>
+<th>Club</th>
 <th>Price</th>
 <th>Delete</th>
 <th>Edit</th>
@@ -77,8 +77,8 @@ include('includes/header.php');
 <td class="right"><?php echo $record['price']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
-<input type="hidden" name="record_id" value="<?php echo $record['recordID']; ?>">
-<input type="hidden" name="category_id" value="<?php echo $record['categoryID']; ?>">
+<input type="hidden" name="record_id" value="<?php echo $record['teamID']; ?>">
+<input type="hidden" name="category_id" value="<?php echo $record['leagueID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
 <td><form action="edit_record_form.php" method="post"
@@ -92,8 +92,8 @@ value="<?php echo $record['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
+<p><a href="add_record_form.php">Add Team</a></p>
+<p><a href="category_list.php">Manage Leagues</a></p>
 </section>
 <?php
 include('includes/footer.php');
